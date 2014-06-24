@@ -37,7 +37,7 @@ bool ToheinkMediaTransfer::restartEnabled() const
 
 QUrl ToheinkMediaTransfer::serviceIcon() const
 {
-    return QUrl::fromLocalFile("/usr/share/harbour-toheink/images/notification.png");
+    return QUrl::fromLocalFile("/usr/share/harbour-toheink-server/images/notification.png");
 }
 
 void ToheinkMediaTransfer::uploadMediaProgress(const QString &jid, const QString &msgId, int percent)

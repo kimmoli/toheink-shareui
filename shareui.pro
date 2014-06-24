@@ -17,4 +17,7 @@ SOURCES += \
     toheinkplugininfo.cpp \
     toheinkmediatransfer.cpp
 
+
+OTHER_FILES += rpm/shareui.spec
+
 INSTALLS += target

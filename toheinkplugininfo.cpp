@@ -23,7 +23,7 @@ void ToheinkPluginInfo::query()
 
     info.displayName     = QLatin1String("Toheink");
     info.methodId        = QLatin1String("ToheinkSharePlugin");
-    info.shareUIPath     = QLatin1String("/usr/share/harbour-toheink/qml/ShareUI.qml");
+    info.shareUIPath     = QLatin1String("/usr/share/harbour-toheink-server/qml/ShareUI.qml");
     info.capabilitities  = capabilities;
     m_infoList.clear();
     m_infoList << info;
