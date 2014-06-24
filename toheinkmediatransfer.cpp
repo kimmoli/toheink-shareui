@@ -47,6 +47,9 @@ void ToheinkMediaTransfer::start()
 
     converter->convert(_mediaName, QString("/tmp/img.xbm"));
 
+    system("tail -n +4 /tmp/img.xbm | xxd -r -p > /tmp/epd/display");
+    system("echo U > /tmp/epd/command");
+
     /* Progress ?? */
     // setProgress(qreal(0.0));
 

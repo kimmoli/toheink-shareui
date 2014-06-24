@@ -7,9 +7,6 @@ ShareDialog
     id: root
     allowedOrientations: Orientation.Portrait
 
-    property int viewWidth: root.isPortrait ? Screen.width : Screen.width / 2
-    property variant jids: []
-
     property string path: source
 
     canAccept: true
@@ -28,11 +25,4 @@ ShareDialog
         userData: {"description": "Toheink"}
     }
 
-	Column
-	{
-		Label
-		{
-			text: root.path
-		}
-	}
 }
