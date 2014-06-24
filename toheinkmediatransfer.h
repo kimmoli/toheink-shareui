@@ -4,11 +4,8 @@
 #include <TransferEngine-qt5/mediatransferinterface.h>
 #include <TransferEngine-qt5/mediaitem.h>
 
-#include <QtDBus/QtDBus>
-
-#define SERVER_INTERFACE "harbour.toheink.server"
-#define SERVER_SERVICE "harbour.toheink.server"
-#define SERVER_PATH "/"
+#include <QString>
+#include <QVariant>
 
 class ToheinkMediaTransfer : public MediaTransferInterface
 {
@@ -23,15 +20,7 @@ public:
     QUrl	serviceIcon() const;
 
 private:
-    QDBusInterface *_iface;
     QString _mediaName;
-    QString _messageId;
-
-private slots:
-    void uploadMediaProgress(const QString &jid, const QString &msgId, int percent);
-    void uploadMediaFinished(const QString &jid, const QString &msgId, const QString &remoteUrl);
-    void uploadMediaStarted(const QString &jid, const QString &msgId, const QString &localUrl);
-    void uploadMediaFailed(const QString &jid, const QString &msgId);
 
 public slots:
     void	cancel();
